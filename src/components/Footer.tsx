@@ -24,8 +24,8 @@ const Footer = () => {
               <span>Email</span>
               <HiArrowUpRight />
             </a>
-            <a href="https://www.instagram.com/pathakdivy03/" target="_blank">
-              <span>Instagram</span>
+            <a href="https://github.com/divy-03" target="_blank">
+              <span>GitHub</span>
               <HiArrowUpRight />
             </a>
           </div>

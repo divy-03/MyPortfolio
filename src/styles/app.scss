@@ -32,6 +32,10 @@ html {
 
     > li > a {
       color: white;
+
+      > img {
+        width: 3rem;
+      }
     }
   }
 }

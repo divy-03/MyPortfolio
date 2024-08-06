@@ -60,10 +60,14 @@ const App = () => {
         </section>
       )}
 
+      <div className="headCont">
+
+      </div>
+
       <div className="navCont">
         <ul>
           <li>
-            <a href="#">Home</a>
+            <a href="#"><img src="https://res.cloudinary.com/djgwv8dck/image/upload/v1722930336/samples/people/DP-Logo_sfcjuc.png" alt="" /></a>
           </li>
           <li>
             <a href="#about">About</a>

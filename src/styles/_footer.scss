@@ -35,14 +35,13 @@
     > .footMain {
       @include flex(row, space-between, start, 0);
       // background-color: yellow;
-      height: 100%;
       width: 100%;
       padding: 5rem 3rem;
 
       .footLeft {
         @include flex(column, start);
-        height: 100%;
-        width: 70%;
+        // height: 100%;
+        width: 80%;
 
         > span {
           font-size: 2rem;
@@ -63,7 +62,7 @@
       > .footRight {
         @include flex(row, center, center, 2rem);
         flex-wrap: wrap;
-        width: 50%;
+        // width: 40%;
         // height: 100%;
 
         > a {
@@ -95,6 +94,86 @@
           }
         }
       }
+    }
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  .footCont {
+    > div {
+      > .footHead {
+        > h2 {
+          font-size: 8rem;
+        }
+      }
+    }
+
+    .footMain {
+      padding: 0;  
+    }
+
+    .footLeft {
+      width: auto;
+    }
+
+    .footRight {
+      width: auto;
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .footCont {
+    // height: 90%;
+    // margin-bottom: 15%;
+    > div {
+      > .footHead {
+        margin-top: 2rem;
+        > h2 {
+          font-size: 5rem;
+        }
+      }
+
+      > .footMain {
+        @include flex(column);
+        padding: 0;  
+
+        .footLeft {
+          width: 100%;
+          border: 2px solid;
+        }
+
+        .footRight {
+          @include flex();
+          width: 100%;
+
+          > a {
+            width: 40%;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 464px) {
+  .footHead {
+
+    > h2 {
+      font-size: 20px;
+    }
+  }
+
+
+  .footRight {
+    background-color: wheat;
+    width: 100%;
+
+    > a {
+      border: 2px solid red;
+      font-size: 1rem;
+      width: 100%;
     }
   }
 }

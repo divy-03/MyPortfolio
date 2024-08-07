@@ -23,7 +23,7 @@ html {
   background-color: white;
   backdrop-filter: blur(5px);
   z-index: 12;
-  padding: 0.2rem 1rem;
+  // padding: 0.2rem 1rem;
   width: 93.2dvw;
   border-radius: 5px;
   font-weight: 900;
@@ -358,8 +358,13 @@ html {
 
 @media only screen and (max-width: 1000px) {
   .heroSection {
+    > h1 {
+      text-align: justify;
+      font-size: 30vw;
+    }
     > img {
-      width: 70%;
+      width: 75%;
+      right: 0;
     }
   }
   .about {
@@ -386,7 +391,7 @@ html {
       font-size: 30vw;
     }
     > img {
-      width: 90%;
+      // width: 90%;
       right: 0;
     }
   }
@@ -413,17 +418,28 @@ html {
     }
     > img {
       width: 100%;
+      bottom: 12%;
+      // transform: translateY(50%);
+      border-bottom: 2px solid;
+      border-radius: 50% 50% 10px 10px;
+      // background-color: #00000056;
+      // backdrop-filter: blur(2px);
     }
   }
 
   .navCont {
     width: 90%;
     bottom: 1%;
+    border: 1px solid;
 
     > ul {
       @include flex(row, space-around);
       width: 100%;
     }
+  }
+
+  .copy, .scrollD {
+    bottom: 15%;
   }
 
   .skills > section {

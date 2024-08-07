@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import Footer from "./components/Footer";
 import "./styles/app.scss";
 import { HiArrowDown } from "react-icons/hi";
+import Accordion from "./components/Accordian";
 import Skills from "./components/Skills";
 
 const App = () => {

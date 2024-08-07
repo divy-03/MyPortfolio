@@ -8,15 +8,6 @@ const Skills = () => {
         <div className="fade-up">
           <ul>
             <li>
-              <h3>Programming Languages</h3>
-            </li>
-            <li>C++</li>
-            <li>Java</li>
-            <li>Python</li>
-            <li>JavaScript</li>
-          </ul>
-          <ul>
-            <li>
               <h3>Backend Development</h3>
             </li>
             <li>JavaScript</li>
@@ -35,6 +26,15 @@ const Skills = () => {
             <li>TypeScript</li>
             <li>Sass</li>
             <li>HTML / CSS</li>
+          </ul>
+          <ul>
+            <li>
+              <h3>Programming Languages</h3>
+            </li>
+            <li>C++</li>
+            <li>Java</li>
+            <li>Python</li>
+            <li>JavaScript</li>
           </ul>
           <ul>
             <li>

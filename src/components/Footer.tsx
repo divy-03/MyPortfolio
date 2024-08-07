@@ -8,10 +8,14 @@ const Footer = () => {
           <h2>Divy Pathak</h2>
         </div>
         <div className="footMain">
-          <div>
+          <div className="footLeft">
             <span>Made with love at Vit Bhopal, India</span>
+            <p>
+              Connect with me at
+              <a href="mailto:pathakdivy03@gmail.com">pathakdivy03@gmail.com</a>
+            </p>
           </div>
-          <div>
+          <div className="footRight">
             <a href="https://codeforces.com/profile/excl" target="_blank">
               <span>CodeForces</span>
               <HiArrowUpRight />

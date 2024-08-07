@@ -1,21 +1,28 @@
 .footer {
+  @include flex();
   height: 100dvh;
 }
 
 .footCont {
-  @include flex(column, start);
+  @include flex();
   background-color: white;
   height: 100dvh;
+  width: 100dvw;
   z-index: 9;
   position: sticky;
+  width: 100%;
   top: 0;
 
   > div {
+    @include flex(column);
     height: 100%;
-    padding: 5rem;
+    width: 100%;
+    padding: 5dvw;
 
     > .footHead {
       @include flex();
+      margin-top: 7rem;
+      padding: 0 2rem;
       border: 1px solid;
       border-radius: 20px;
 
@@ -26,20 +33,38 @@
     }
 
     > .footMain {
-      @include flex(row, space-between, center, 0);
-      //   background-color: yellow;
+      @include flex(row, space-between, start, 0);
+      // background-color: yellow;
+      height: 100%;
+      width: 100%;
       padding: 5rem 3rem;
 
-      > div {
-        @include flex();
-        width: 50%;
-        display: flex;
-        flex-wrap: wrap;
+      .footLeft {
+        @include flex(column, start);
+        height: 100%;
+        width: 70%;
 
         > span {
-            font-size: 2rem;
-            font-weight: 500;
+          font-size: 2rem;
+          font-weight: 500;
         }
+
+        > p {
+          color: black;
+          font-size: 1.5rem;
+
+          > a {
+            color: grey;
+            font-weight: 900;
+            text-decoration: underline;
+          }
+        }
+      }
+      > .footRight {
+        @include flex(row, center, center, 2rem);
+        flex-wrap: wrap;
+        width: 50%;
+        // height: 100%;
 
         > a {
           color: black;

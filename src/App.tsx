@@ -53,21 +53,47 @@ const App = () => {
         <Footer />
       ) : (
         <section className="heroSection">
-          <div className="marquee1">
+          {/* <div className="marquee1">
             <div className="marquee-content1">Divy Pathak</div>
+          </div> */}
+          <h1>Divy Pathak</h1>
+          <img
+            src={
+              "https://res.cloudinary.com/djgwv8dck/image/upload/v1722799465/samples/people/sw3-removebg_s2vfra.png "
+            }
+            alt="Dp"
+          />
+
+          <div className="headCont">
+            <a href="#">
+              <img
+                src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/d0d5f274-3b4b-4928-a7e2-824dbe366732/de88nc7-90a7840a-8e2a-470a-bcf1-cebc20de1a01.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2QwZDVmMjc0LTNiNGItNDkyOC1hN2UyLTgyNGRiZTM2NjczMlwvZGU4OG5jNy05MGE3ODQwYS04ZTJhLTQ3MGEtYmNmMS1jZWJjMjBkZTFhMDEucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.K89210jfgkBJbG-kEXvyU6l3ula5SWvzlO6lkTb0MeA"
+                alt=""
+              />
+              Hey, I'm Divy
+            </a>
           </div>
-          <img src={"https://res.cloudinary.com/djgwv8dck/image/upload/v1722799465/samples/people/sw3-removebg_s2vfra.png "} alt="Dp" />
+          <div className="scrollD">
+            <div className="marquee2">
+              <div className="marquee-content2">
+                <HiArrowDown />
+              </div>
+            </div>
+            <span>SCROLL DOWN</span>
+          </div>
         </section>
       )}
-
-      <div className="headCont">
-
-      </div>
 
       <div className="navCont">
         <ul>
           <li>
-            <a href="#"><img src="https://res.cloudinary.com/djgwv8dck/image/upload/v1722930336/samples/people/DP-Logo_sfcjuc.png" alt="" /></a>
+            <a href="#">
+              <img
+                src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/d0d5f274-3b4b-4928-a7e2-824dbe366732/de88nc7-90a7840a-8e2a-470a-bcf1-cebc20de1a01.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2QwZDVmMjc0LTNiNGItNDkyOC1hN2UyLTgyNGRiZTM2NjczMlwvZGU4OG5jNy05MGE3ODQwYS04ZTJhLTQ3MGEtYmNmMS1jZWJjMjBkZTFhMDEucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.K89210jfgkBJbG-kEXvyU6l3ula5SWvzlO6lkTb0MeA"
+                alt=""
+              />
+            </a>
+            {/* <a href="#"><img src="https://res.cloudinary.com/djgwv8dck/image/upload/v1722930336/samples/people/DP-Logo_sfcjuc.png" alt="" /></a> */}
           </li>
           <li>
             <a href="#about">About</a>
@@ -79,15 +105,6 @@ const App = () => {
             <a href="#projects">Projects</a>
           </li>
         </ul>
-      </div>
-
-      <div className="scrollD">
-        <div className="marquee2">
-          <div className="marquee-content2">
-            <HiArrowDown />
-          </div>
-        </div>
-        <span>SCROLL DOWN</span>
       </div>
 
       <div className="copy">
@@ -182,7 +199,7 @@ const App = () => {
           </div>
         </section>
       </section>
-        <section className="footer"></section>
+      <section className="footer"></section>
     </>
   );
 };

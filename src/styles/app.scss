@@ -14,16 +14,46 @@ html {
 @import "variables";
 @import "footer";
 
+.headCont {
+  @include flex(row, space-between, center);
+  position: fixed;
+  transform: translateX(-50%);
+  left: 50%;
+  top: 3%;
+  background-color: white;
+  backdrop-filter: blur(5px);
+  z-index: 12;
+  padding: 0.2rem 1rem;
+  width: 93.2dvw;
+  border-radius: 5px;
+  font-weight: 900;
+
+  > a {
+    @include flex();
+    color: black;
+    padding: 0.3rem;
+    font-size: 1.2rem;
+
+    > img {
+      background-color: black;
+      border: 1px solid white;
+      border-radius: 10px;
+      padding: 0.3rem;
+      width: 2rem;
+    }
+  }
+}
+
 .navCont {
   @include flex();
   position: fixed;
   bottom: 5%;
   left: 50%;
   z-index: 30;
-  background-color: rgba(82, 82, 82, 0.522);
+  background-color: rgba(65, 65, 65, 0.7);
   backdrop-filter: blur(5px);
   transform: translateX(-50%);
-  padding: 1rem;
+  padding: 0.5rem 0.8rem;
   border: 1px solid rgba(210, 210, 210, 0.738);
   border-radius: 10px;
 
@@ -31,10 +61,17 @@ html {
     @include flex();
 
     > li > a {
+      @include flex();
       color: white;
+      padding: 0.3rem;
+      font-size: 1.2rem;
 
       > img {
-        width: 3rem;
+        background-color: black;
+        border: 1px solid white;
+        border-radius: 10px;
+        padding: 0.3rem;
+        width: 2rem;
       }
     }
   }
@@ -45,15 +82,22 @@ html {
   height: 100dvh;
   background: url("../assets/heroBg.png"), #00000027;
   background-blend-mode: darken;
-  background-size: contain;
+  background-size: cover;
+  background-position: center;
   position: sticky;
   top: 0;
   z-index: 10;
 
+  > h1 {
+    font-size: 18rem;
+    text-align: center;
+  }
+
   > img {
-    height: 100dvh;
+    width: 55%;
     z-index: 5;
     position: absolute;
+    bottom: 0;
   }
 }
 
@@ -106,12 +150,16 @@ html {
         flex-wrap: wrap;
         width: 100%;
         > ul {
+          // min-width: 45%;
+          // border: 2px solid red;
+
           > li {
             font-size: 1.2rem;
             font-weight: 500;
 
             &:first-of-type {
               margin-bottom: 1rem;
+              text-decoration: underline;
             }
           }
         }
@@ -126,7 +174,7 @@ html {
   position: relative;
   border-radius: 0 0 10px 10px;
   color: white;
-  padding: 4rem;
+  padding: 1rem 4rem;
 
   > div {
     @include flex(column, start, start);
@@ -142,7 +190,7 @@ html {
     @include flex(column, center, start);
 
     .project {
-      padding: 1rem 0 ;
+      padding: 1rem 0;
       border-radius: 8px;
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 
@@ -306,4 +354,88 @@ html {
   background-color: #f0f0f0;
   border: 1px solid #ccc;
   border-radius: 10px;
+}
+
+@media only screen and (max-width: 1000px) {
+  .heroSection {
+    > img {
+      width: 70%;
+    }
+  }
+  .about {
+    padding: 4rem;
+
+    > div {
+      padding: 2rem;
+
+      > p {
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  .skills > section {
+    padding: 4rem;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .heroSection {
+    > h1 {
+      text-align: justify;
+      font-size: 30vw;
+    }
+    > img {
+      width: 90%;
+      right: 0;
+    }
+  }
+
+  .about {
+    flex-direction: column;
+    padding: 2rem;
+    > div {
+      padding: 0rem;
+    }
+  }
+
+  .skills > section {
+    padding: 2rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .heroSection {
+    align-items: start;
+    > h1 {
+      margin-top: 10vh;
+      text-align: center;
+    }
+    > img {
+      width: 100%;
+    }
+  }
+
+  .navCont {
+    width: 90%;
+    bottom: 1%;
+
+    > ul {
+      @include flex(row, space-around);
+      width: 100%;
+    }
+  }
+
+  .skills > section {
+    > div {
+      > div {
+        // background-color: wheat;
+
+        > ul {
+          // background-color: red;
+          width: 100%;  
+        }
+      }
+    }
+  }
 }

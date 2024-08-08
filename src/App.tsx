@@ -72,6 +72,7 @@ const App = () => {
               />
               Hey, I'm Divy
             </a>
+            <a href="https://drive.google.com/file/d/1HdnsAMJ1zE563s_Sz2INMd6Irggs42EX/view" className="downloadBtn" target="_blank">View Resume</a>
           </div>
           <div className="scrollD">
             <div className="marquee2">

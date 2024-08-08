@@ -42,6 +42,16 @@ html {
       width: 2rem;
     }
   }
+
+  > .downloadBtn {
+    margin-right: .5rem;
+    padding: 0.5rem;
+    // color: white;
+    // background-color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
 }
 
 .navCont {
@@ -446,7 +456,8 @@ html {
     }
   }
 
-  .copy, .scrollD {
+  .copy,
+  .scrollD {
     bottom: 15%;
   }
 
@@ -457,7 +468,7 @@ html {
 
         > ul {
           // background-color: red;
-          width: 100%;  
+          width: 100%;
         }
       }
     }

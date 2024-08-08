@@ -3,6 +3,7 @@ import Footer from "./components/Footer";
 import "./styles/app.scss";
 import { HiArrowDown } from "react-icons/hi";
 import Skills from "./components/Skills";
+import { HiArrowUpRight } from "react-icons/hi2";
 
 const App = () => {
   const [proObsvrd, setProObsvr] = useState(false);
@@ -70,9 +71,15 @@ const App = () => {
                 src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/d0d5f274-3b4b-4928-a7e2-824dbe366732/de88nc7-90a7840a-8e2a-470a-bcf1-cebc20de1a01.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2QwZDVmMjc0LTNiNGItNDkyOC1hN2UyLTgyNGRiZTM2NjczMlwvZGU4OG5jNy05MGE3ODQwYS04ZTJhLTQ3MGEtYmNmMS1jZWJjMjBkZTFhMDEucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.K89210jfgkBJbG-kEXvyU6l3ula5SWvzlO6lkTb0MeA"
                 alt=""
               />
-              Hey, I'm Divy
+              Hey, I'm a full stack developer.
             </a>
-            <a href="https://drive.google.com/file/d/1HdnsAMJ1zE563s_Sz2INMd6Irggs42EX/view" className="downloadBtn" target="_blank">View Resume</a>
+            <a
+              href="https://drive.google.com/file/d/1HdnsAMJ1zE563s_Sz2INMd6Irggs42EX/view"
+              className="downloadBtn"
+              target="_blank"
+            >
+              View Resume
+            </a>
           </div>
           <div className="scrollD">
             <div className="marquee2">
@@ -138,6 +145,9 @@ const App = () => {
             <div className="project fade-up">
               <h3>
                 VitXchange: A buy and sell website for university students
+                <a href="https://github.com/divy-03/vitXchange-ts">
+                  <HiArrowUpRight />
+                </a>
               </h3>
               <p>
                 Developed a MERN stack web platform to facilitate buying and
@@ -151,8 +161,31 @@ const App = () => {
             </div>
             <div className="project fade-up">
               <h3>
+                Dream League: A web platform to facilitate sports tournament.
+                <a href="https://github.com/divy-03/vitXchange-ts">
+                  <HiArrowUpRight />
+                </a>
+              </h3>
+              <p>
+                Dream League will enable students to register as players, be
+                rated based on their skills, and participate in an auction where
+                captains bid to form their teams. The platform provides
+                real-time updates, team statistics, and tournament schedules,
+                enhancing the experience for both players and spectators. It
+                also offers an admin dashboard for managing events and ratings.
+              </p>
+              <p>
+                <strong>Technologies:</strong> MongoDB, ExpressJS, React,
+                NodeJS, TypeScript, CSS
+              </p>
+            </div>
+            <div className="project fade-up">
+              <h3>
                 Personal Portfolio: Portfolio website to showcase frontend
                 skills
+                <a href="https://github.com/divy-03/myportfolio">
+                  <HiArrowUpRight />
+                </a>
               </h3>
               <p>
                 Created a visually engaging portfolio using HTML, CSS (Sass),
@@ -165,7 +198,12 @@ const App = () => {
               </p>
             </div>
             <div className="project fade-up">
-              <h3>Stock Prediction System: Predicts stock price trends</h3>
+              <h3>
+                Stock Prediction System: Predicts stock price trends
+                <a href="https://github.com/divy-03/stockpredictor">
+                  <HiArrowUpRight />
+                </a>
+              </h3>
               <p>
                 Built a machine learning model to analyze historical stock data
                 and predict future trends, aiding informed investment decisions.
@@ -178,6 +216,9 @@ const App = () => {
             <div className="project fade-up">
               <h3>
                 Todo App: Simple Web App developed using React with TypeScript
+                <a href="https://github.com/divy-03/ToDo---Web-App">
+                  <HiArrowUpRight />
+                </a>
               </h3>
               <p>
                 Developed a user-friendly to-do list application for task
@@ -188,7 +229,12 @@ const App = () => {
               </p>
             </div>
             <div className="project fade-up">
-              <h3>Tic Tac Toe: Interactive game using React.js</h3>
+              <h3>
+                Tic Tac Toe: Interactive game using React.js
+                <a href="https://github.com/divy-03/Tic-Tac-Toe">
+                  <HiArrowUpRight />
+                </a>
+              </h3>
               <p>
                 Designed an interactive Tic Tac Toe game with a clean interface
                 and robust game logic using React.js.

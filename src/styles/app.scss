@@ -44,7 +44,7 @@ html {
   }
 
   > .downloadBtn {
-    margin-right: .5rem;
+    margin-right: 0.5rem;
     padding: 0.5rem;
     // color: white;
     // background-color: black;
@@ -194,19 +194,31 @@ html {
       width: 100%;
       font-size: 4rem;
       border-bottom: 1px solid;
+      margin-bottom: 1rem;
     }
   }
   .project-list {
     @include flex(column, center, start);
 
     .project {
-      padding: 1rem 0;
+      // padding: 1rem 0;
       border-radius: 8px;
+      width: 100%;
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      // border-right: 2px solid;
+      // border-bottom: 2px solid;
 
       h3 {
-        margin: 0 1rem 0 0;
+        // margin: 0 1rem 0 0;
         font-size: 1.5rem;
+        width: 100%;
+        @include flex(row, space-between);
+
+        > a {
+          right: 4rem;
+          color: white;
+          font-size: 4rem;
+        }
       }
 
       p {
@@ -399,6 +411,12 @@ html {
 }
 
 @media only screen and (max-width: 800px) {
+  .headCont {
+    > a {
+      font-size: 1rem;
+    }
+  }
+
   .heroSection {
     > h1 {
       text-align: justify;

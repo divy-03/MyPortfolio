@@ -145,7 +145,7 @@ const App = () => {
             <div className="project fade-up">
               <h3>
                 VitXchange: A buy and sell website for university students
-                <a href="https://github.com/divy-03/vitXchange-ts">
+                <a href="https://github.com/divy-03/vitXchange-ts" target="_blank">
                   <HiArrowUpRight />
                 </a>
               </h3>
@@ -162,7 +162,7 @@ const App = () => {
             <div className="project fade-up">
               <h3>
                 Dream League: A web platform to facilitate sports tournament.
-                <a href="https://github.com/divy-03/vitXchange-ts">
+                <a href="https://github.com/divy-03/vitXchange-ts" target="_blank">
                   <HiArrowUpRight />
                 </a>
               </h3>
@@ -183,7 +183,7 @@ const App = () => {
               <h3>
                 Personal Portfolio: Portfolio website to showcase frontend
                 skills
-                <a href="https://github.com/divy-03/myportfolio">
+                <a href="https://github.com/divy-03/myportfolio" target="_blank">
                   <HiArrowUpRight />
                 </a>
               </h3>
@@ -200,7 +200,7 @@ const App = () => {
             <div className="project fade-up">
               <h3>
                 Stock Prediction System: Predicts stock price trends
-                <a href="https://github.com/divy-03/stockpredictor">
+                <a href="https://github.com/divy-03/stockpredictor" target="_blank">
                   <HiArrowUpRight />
                 </a>
               </h3>
@@ -216,7 +216,7 @@ const App = () => {
             <div className="project fade-up">
               <h3>
                 Todo App: Simple Web App developed using React with TypeScript
-                <a href="https://github.com/divy-03/ToDo---Web-App">
+                <a href="https://github.com/divy-03/ToDo---Web-App" target="_blank">
                   <HiArrowUpRight />
                 </a>
               </h3>
@@ -231,7 +231,7 @@ const App = () => {
             <div className="project fade-up">
               <h3>
                 Tic Tac Toe: Interactive game using React.js
-                <a href="https://github.com/divy-03/Tic-Tac-Toe">
+                <a href="https://github.com/divy-03/Tic-Tac-Toe" target="_blank">
                   <HiArrowUpRight />
                 </a>
               </h3>

@@ -326,6 +326,14 @@ html {
   transition: all 1s;
 }
 
+.fade-up-delay {
+  opacity: 0;
+  filter: blur(2px);
+  transform: translateY(10%) scale(0.9);
+  transition: all 1s;
+  transition-delay: 0.5s;
+}
+
 .fade-down {
   opacity: 0;
   filter: blur(2px);

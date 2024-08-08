@@ -31,12 +31,14 @@ const App = () => {
     const fadeDown = document.querySelectorAll(".fade-down");
     const fadeRightFast = document.querySelectorAll(".fade-right-fast");
     const projectsSection = document.querySelector(".projects");
+    const fadeUpDelay = document.querySelectorAll(".fade-up-delay");
 
     fadeRight.forEach((element) => observer.observe(element));
     fadeRightFast.forEach((element) => observer.observe(element));
     fadeLeft.forEach((element) => observer.observe(element));
     fadeUp.forEach((element) => observer.observe(element));
     fadeDown.forEach((element) => observer.observe(element));
+    fadeUpDelay.forEach((element) => observer.observe(element));
 
     if (projectsSection) {
       observer.observe(projectsSection);
@@ -57,8 +59,8 @@ const App = () => {
           {/* <div className="marquee1">
             <div className="marquee-content1">Divy Pathak</div>
           </div> */}
-          <h1>Divy Pathak</h1>
-          <img
+          <h1 className="fade-down">Divy Pathak</h1>
+          <img className="fade-up-delay"
             src={
               "https://res.cloudinary.com/djgwv8dck/image/upload/v1722799465/samples/people/sw3-removebg_s2vfra.png "
             }
@@ -81,7 +83,7 @@ const App = () => {
               View Resume
             </a>
           </div>
-          <div className="scrollD">
+          <div className="scrollD fade-right">
             <div className="marquee2">
               <div className="marquee-content2">
                 <HiArrowDown />
@@ -115,7 +117,7 @@ const App = () => {
         </ul>
       </div>
 
-      <div className="copy">
+      <div className="copy fade-left">
         <p>&copy; 2024</p>
       </div>
 
@@ -145,7 +147,10 @@ const App = () => {
             <div className="project fade-up">
               <h3>
                 VitXchange: A buy and sell website for university students
-                <a href="https://github.com/divy-03/vitXchange-ts" target="_blank">
+                <a
+                  href="https://github.com/divy-03/vitXchange-ts"
+                  target="_blank"
+                >
                   <HiArrowUpRight />
                 </a>
               </h3>
@@ -162,7 +167,10 @@ const App = () => {
             <div className="project fade-up">
               <h3>
                 Dream League: A web platform to facilitate sports tournament.
-                <a href="https://github.com/divy-03/vitXchange-ts" target="_blank">
+                <a
+                  href="https://github.com/divy-03/vitXchange-ts"
+                  target="_blank"
+                >
                   <HiArrowUpRight />
                 </a>
               </h3>
@@ -183,7 +191,10 @@ const App = () => {
               <h3>
                 Personal Portfolio: Portfolio website to showcase frontend
                 skills
-                <a href="https://github.com/divy-03/myportfolio" target="_blank">
+                <a
+                  href="https://github.com/divy-03/myportfolio"
+                  target="_blank"
+                >
                   <HiArrowUpRight />
                 </a>
               </h3>
@@ -200,7 +211,10 @@ const App = () => {
             <div className="project fade-up">
               <h3>
                 Stock Prediction System: Predicts stock price trends
-                <a href="https://github.com/divy-03/stockpredictor" target="_blank">
+                <a
+                  href="https://github.com/divy-03/stockpredictor"
+                  target="_blank"
+                >
                   <HiArrowUpRight />
                 </a>
               </h3>
@@ -216,7 +230,10 @@ const App = () => {
             <div className="project fade-up">
               <h3>
                 Todo App: Simple Web App developed using React with TypeScript
-                <a href="https://github.com/divy-03/ToDo---Web-App" target="_blank">
+                <a
+                  href="https://github.com/divy-03/ToDo---Web-App"
+                  target="_blank"
+                >
                   <HiArrowUpRight />
                 </a>
               </h3>
@@ -231,7 +248,10 @@ const App = () => {
             <div className="project fade-up">
               <h3>
                 Tic Tac Toe: Interactive game using React.js
-                <a href="https://github.com/divy-03/Tic-Tac-Toe" target="_blank">
+                <a
+                  href="https://github.com/divy-03/Tic-Tac-Toe"
+                  target="_blank"
+                >
                   <HiArrowUpRight />
                 </a>
               </h3>

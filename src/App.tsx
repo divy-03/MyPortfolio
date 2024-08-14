@@ -31,14 +31,12 @@ const App = () => {
     const fadeDown = document.querySelectorAll(".fade-down");
     const fadeRightFast = document.querySelectorAll(".fade-right-fast");
     const projectsSection = document.querySelector(".projects");
-    const fadeUpDelay = document.querySelectorAll(".fade-up-delay");
 
     fadeRight.forEach((element) => observer.observe(element));
     fadeRightFast.forEach((element) => observer.observe(element));
     fadeLeft.forEach((element) => observer.observe(element));
     fadeUp.forEach((element) => observer.observe(element));
     fadeDown.forEach((element) => observer.observe(element));
-    fadeUpDelay.forEach((element) => observer.observe(element));
 
     if (projectsSection) {
       observer.observe(projectsSection);
@@ -59,8 +57,8 @@ const App = () => {
           {/* <div className="marquee1">
             <div className="marquee-content1">Divy Pathak</div>
           </div> */}
-          <h1 className="fade-down">Divy Pathak</h1>
-          <img className="fade-up-delay"
+          <h1>Divy Pathak</h1>
+          <img
             src={
               "https://res.cloudinary.com/djgwv8dck/image/upload/v1722799465/samples/people/sw3-removebg_s2vfra.png "
             }
@@ -83,7 +81,7 @@ const App = () => {
               View Resume
             </a>
           </div>
-          <div className="scrollD fade-right">
+          <div className="scrollD">
             <div className="marquee2">
               <div className="marquee-content2">
                 <HiArrowDown />
@@ -117,7 +115,7 @@ const App = () => {
         </ul>
       </div>
 
-      <div className="copy fade-left">
+      <div className="copy">
         <p>&copy; 2024</p>
       </div>
 

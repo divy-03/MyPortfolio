@@ -10,6 +10,10 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 @import "mixin";
 @import "variables";
 @import "footer";
@@ -102,7 +106,7 @@ html {
   > h1 {
     font-size: 18rem;
     text-align: center;
-    animation: fade-up-once 1s;
+    // animation: fade-up-once 1s;
   }
 
   > img {
@@ -110,7 +114,7 @@ html {
     z-index: 5;
     position: absolute;
     bottom: 0;
-    animation: fade-up-once 2s;
+    // animation: fade-up-once 2s;
   }
 }
 
@@ -273,7 +277,7 @@ html {
   padding: 0.6rem;
   border-radius: 5px;
   font-weight: 900;
-  animation: fade-left-once 1s;
+  // animation: fade-left-once 1s;
 }
 
 .scrollD {
@@ -284,7 +288,7 @@ html {
   // background-color: white;
   z-index: 10;
   display: flex;
-  animation: fade-right-once 1s;
+  // animation: fade-right-once 1s;
 
   > span {
     margin-top: 10px;
@@ -303,7 +307,7 @@ html {
 
     .marquee-content2 {
       display: inline-block;
-      animation: marquee2 2s linear infinite;
+      // animation: marquee2 2s linear infinite;
       font-size: 2rem;
       font-weight: 900;
       font-family: sansa;
@@ -459,6 +463,11 @@ html {
 
   .skills > section {
     padding: 4rem;
+
+    > div > div {
+    @include flex(column);
+
+    }
   }
 
   .projects {
@@ -523,6 +532,7 @@ html {
     width: 90%;
     bottom: 1%;
     border: 1px solid;
+    z-index: 2100;
 
     > ul {
       @include flex(row, space-around);

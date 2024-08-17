@@ -2,11 +2,11 @@ const Skills = () => {
   return (
     <section className="skillCont">
       <div>
-        <h2 className="fade-right-fast">Skills</h2>
+        <h2 className="skiHead">Skills</h2>
       </div>
       <div>
-        <div className="fade-up">
-          <ul>
+        <div>
+          <ul className="skiList">
             <li>
               <h3>Backend Development</h3>
             </li>
@@ -16,7 +16,7 @@ const Skills = () => {
             <li>TypeScript</li>
             <li>Python</li>
           </ul>
-          <ul>
+          <ul className="skiList">
             <li>
               <h3>Frontend Development</h3>
             </li>
@@ -27,7 +27,7 @@ const Skills = () => {
             <li>Sass</li>
             <li>HTML / CSS</li>
           </ul>
-          <ul>
+          <ul className="skiList">
             <li>
               <h3>Programming Languages</h3>
             </li>
@@ -36,7 +36,7 @@ const Skills = () => {
             <li>Python</li>
             <li>JavaScript</li>
           </ul>
-          <ul>
+          <ul className="skiList">
             <li>
               <h3>Miscellaneous</h3>
             </li>

@@ -6,20 +6,28 @@ import { HiArrowUpRight } from "react-icons/hi2";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import Footer from "./components/Footer";
 import { motion } from "framer-motion";
 gsap.registerPlugin(useGSAP, ScrollTrigger);
-import LocomotiveScroll from 'locomotive-scroll';
+import LocomotiveScroll from "locomotive-scroll";
 
 const App = () => {
-  const scroll = new LocomotiveScroll();
-  // el: document.querySelector('[data-scroll-container]'),
-  // smooth: true,
-  // smoothMobile: false, // Disable smooth scroll on mobile for performance
-  // });
   const tl = useRef<gsap.core.Timeline | null>(null);
-  // const heroSection = useRef<HTMLDivElement>(null);
+  const heroSection = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (heroSection.current) {
+      const scroll = new LocomotiveScroll({
+        el: heroSection.current,
+        smooth: true,
+      });
+
+      return () => {
+        scroll.destroy();
+      };
+    }
+  }, []);
 
   useGSAP(() => {
     tl.current = gsap
@@ -41,10 +49,10 @@ const App = () => {
     gsap.from(".navCont > ul > li > a", {
       y: 100,
       opacity: 0,
-      stagger: .2,
-      duration: .5,
+      stagger: 0.2,
+      duration: 0.5,
       delay: 2,
-    })
+    });
 
     gsap.from(".aboutHead", {
       x: 200,

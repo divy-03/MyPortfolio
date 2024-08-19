@@ -6,7 +6,7 @@ import { HiArrowUpRight } from "react-icons/hi2";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 import Footer from "./components/Footer";
 import { motion } from "framer-motion";
 gsap.registerPlugin(useGSAP, ScrollTrigger);

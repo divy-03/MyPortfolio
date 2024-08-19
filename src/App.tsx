@@ -14,20 +14,22 @@ import LocomotiveScroll from "locomotive-scroll";
 
 const App = () => {
   const tl = useRef<gsap.core.Timeline | null>(null);
-  const heroSection = useRef<HTMLDivElement>(null);
+  // const heroSection = useRef<HTMLDivElement>(null);
+  const locomotiveScroll = new LocomotiveScroll();
+  locomotiveScroll.destroy();
 
-  useEffect(() => {
-    if (heroSection.current) {
-      const scroll = new LocomotiveScroll({
-        el: heroSection.current,
-        smooth: true,
-      });
+  // useEffect(() => {
+  //   if (heroSection.current) {
+  //     const scroll = new LocomotiveScroll({
+  //       // el: heroSection.current,
+  //       smooth: true,
+  //     });
 
-      return () => {
-        scroll.destroy();
-      };
-    }
-  }, []);
+  //     return () => {
+  //       scroll.destroy();
+  //     };
+  //   }
+  // }, []);
 
   useGSAP(() => {
     tl.current = gsap
@@ -302,13 +304,16 @@ const App = () => {
             />
             Hey, I'm a full stack developer.
           </a>
-          <a
+          <motion.a
             href="https://drive.google.com/file/d/1HdnsAMJ1zE563s_Sz2INMd6Irggs42EX/view"
             className="downloadBtn"
             target="_blank"
+            whileHover={{ scale: 1.1, x: -10 }}
+            whileTap={{ scale: 0.9 }}
+            transition={{ type: "spring", stiffness: 400, damping: 17 }}
           >
             View Resume
-          </a>
+          </motion.a>
         </div>
         <div className="scrollD">
           <div className="marquee2">
@@ -326,22 +331,48 @@ const App = () => {
       <div className="navCont">
         <ul>
           <li>
-            <a href="#">
+            <motion.a
+              href="#"
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              transition={{ type: "spring", stiffness: 400, damping: 17 }}
+            >
               <img
                 src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/d0d5f274-3b4b-4928-a7e2-824dbe366732/de88nc7-90a7840a-8e2a-470a-bcf1-cebc20de1a01.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2QwZDVmMjc0LTNiNGItNDkyOC1hN2UyLTgyNGRiZTM2NjczMlwvZGU4OG5jNy05MGE3ODQwYS04ZTJhLTQ3MGEtYmNmMS1jZWJjMjBkZTFhMDEucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.K89210jfgkBJbG-kEXvyU6l3ula5SWvzlO6lkTb0MeA"
                 alt=""
               />
-            </a>
+            </motion.a>
             {/* <a href="#"><img src="https://res.cloudinary.com/djgwv8dck/image/upload/v1722930336/samples/people/DP-Logo_sfcjuc.png" alt="" /></a> */}
           </li>
           <li>
-            <a href="#about">About</a>
+            <motion.a
+              href="#about"
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              transition={{ type: "spring", stiffness: 400, damping: 17 }}
+            >
+              About
+            </motion.a>
           </li>
           <li>
-            <a href="#skills">Skills</a>
+            <motion.a
+              href="#skills"
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              transition={{ type: "spring", stiffness: 400, damping: 17 }}
+            >
+              Skills
+            </motion.a>
           </li>
           <li>
-            <a href="#projects">Projects</a>
+            <motion.a
+              href="#projects"
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              transition={{ type: "spring", stiffness: 400, damping: 17 }}
+            >
+              Projects
+            </motion.a>
           </li>
         </ul>
       </div>

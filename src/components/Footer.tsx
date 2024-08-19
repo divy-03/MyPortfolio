@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import { HiArrowUpRight } from "react-icons/hi2";
 
 const Footer = () => {
@@ -16,22 +17,45 @@ const Footer = () => {
             </p>
           </div>
           <div className="footRight">
-            <a href="https://codeforces.com/profile/excl" target="_blank">
+            <motion.a
+              href="https://codeforces.com/profile/excl"
+              target="_blank"
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              transition={{ type: "spring", stiffness: 400, damping: 17 }}
+            >
               <span>CodeForces</span>
               <HiArrowUpRight />
-            </a>
-            <a href="https://leetcode.com/u/pathakdivy03/" target="_blank">
+            </motion.a>
+            <motion.a
+              href="https://leetcode.com/u/pathakdivy03/"
+              target="_blank"
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              transition={{ type: "spring", stiffness: 400, damping: 17 }}
+            >
               <span>LeetCode</span>
               <HiArrowUpRight />
-            </a>
-            <a href="mailto:pathakdivy03@gmail.com">
+            </motion.a>
+            <motion.a
+              href="mailto:pathakdivy03@gmail.com"
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              transition={{ type: "spring", stiffness: 400, damping: 17 }}
+            >
               <span>Email</span>
               <HiArrowUpRight />
-            </a>
-            <a href="https://github.com/divy-03" target="_blank">
+            </motion.a>
+            <motion.a
+              href="https://github.com/divy-03"
+              target="_blank"
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              transition={{ type: "spring", stiffness: 400, damping: 17 }}
+            >
               <span>GitHub</span>
               <HiArrowUpRight />
-            </a>
+            </motion.a>
           </div>
         </div>
       </div>

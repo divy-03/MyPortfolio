@@ -10,8 +10,14 @@ import { useRef } from "react";
 import Footer from "./components/Footer";
 import { motion } from "framer-motion";
 gsap.registerPlugin(useGSAP, ScrollTrigger);
+import LocomotiveScroll from 'locomotive-scroll';
 
 const App = () => {
+  const scroll = new LocomotiveScroll();
+  // el: document.querySelector('[data-scroll-container]'),
+  // smooth: true,
+  // smoothMobile: false, // Disable smooth scroll on mobile for performance
+  // });
   const tl = useRef<gsap.core.Timeline | null>(null);
   // const heroSection = useRef<HTMLDivElement>(null);
 
@@ -23,7 +29,7 @@ const App = () => {
       .from(".headCont", { y: -100, opacity: 0 })
       .from(".scrollD", { x: -200, duration: 0.6 }, "-=.6")
       .from(".copy", { x: 100, duration: 0.6 }, "-=.3")
-      .from(".marquee", {y: 500, opacity: 0, duration: 1});
+      .from(".marquee", { y: 500, opacity: 0, duration: 1 });
 
     gsap.from(".navCont", {
       y: 120,
@@ -31,6 +37,14 @@ const App = () => {
       delay: 1.5,
       ease: "bounce.out",
     });
+
+    gsap.from(".navCont > ul > li > a", {
+      y: 100,
+      opacity: 0,
+      stagger: .2,
+      duration: .5,
+      delay: 2,
+    })
 
     gsap.from(".aboutHead", {
       x: 200,
@@ -242,14 +256,24 @@ const App = () => {
           <motion.h1
             initial={{ x: "0" }}
             animate={{ x: "-100%" }}
-            transition={{ duration: 10, ease: "linear", repeat: Infinity, delay: 2 }}
+            transition={{
+              duration: 10,
+              ease: "linear",
+              repeat: Infinity,
+              delay: 2,
+            }}
           >
             Divy Pathak
           </motion.h1>
           <motion.h1
             initial={{ x: "0" }}
             animate={{ x: "-100%" }}
-            transition={{ duration: 10, ease: "linear", repeat: Infinity, delay: 2 }}
+            transition={{
+              duration: 10,
+              ease: "linear",
+              repeat: Infinity,
+              delay: 2,
+            }}
           >
             Divy Pathak
           </motion.h1>
@@ -340,12 +364,15 @@ const App = () => {
             <div className="project">
               <h3>
                 VitXchange: A buy and sell website for university students
-                <a
+                <motion.a
                   href="https://github.com/divy-03/vitXchange-ts"
                   target="_blank"
+                  whileHover={{ scale: 1.2 }}
+                  whileTap={{ scale: 0.9 }}
+                  transition={{ type: "spring", stiffness: 400, damping: 17 }}
                 >
                   <HiArrowUpRight />
-                </a>
+                </motion.a>
               </h3>
               <p>
                 Developed a MERN stack web platform to facilitate buying and
@@ -360,12 +387,15 @@ const App = () => {
             <div className="project">
               <h3>
                 Dream League: A web platform to facilitate sports tournament.
-                <a
+                <motion.a
                   href="https://github.com/divy-03/vitXchange-ts"
                   target="_blank"
+                  whileHover={{ scale: 1.2 }}
+                  whileTap={{ scale: 0.9 }}
+                  transition={{ type: "spring", stiffness: 400, damping: 17 }}
                 >
                   <HiArrowUpRight />
-                </a>
+                </motion.a>
               </h3>
               <p>
                 Dream League will enable students to register as players, be
@@ -384,12 +414,15 @@ const App = () => {
               <h3>
                 Personal Portfolio: Portfolio website to showcase frontend
                 skills
-                <a
+                <motion.a
                   href="https://github.com/divy-03/myportfolio"
                   target="_blank"
+                  whileHover={{ scale: 1.2 }}
+                  whileTap={{ scale: 0.9 }}
+                  transition={{ type: "spring", stiffness: 400, damping: 17 }}
                 >
                   <HiArrowUpRight />
-                </a>
+                </motion.a>
               </h3>
               <p>
                 Created a visually engaging portfolio using HTML, CSS (Sass),
@@ -404,12 +437,15 @@ const App = () => {
             <div className="project">
               <h3>
                 Stock Prediction System: Predicts stock price trends
-                <a
+                <motion.a
                   href="https://github.com/divy-03/stockpredictor"
                   target="_blank"
+                  whileHover={{ scale: 1.2 }}
+                  whileTap={{ scale: 0.9 }}
+                  transition={{ type: "spring", stiffness: 400, damping: 17 }}
                 >
                   <HiArrowUpRight />
-                </a>
+                </motion.a>
               </h3>
               <p>
                 Built a machine learning model to analyze historical stock data
@@ -423,12 +459,15 @@ const App = () => {
             <div className="project">
               <h3>
                 Todo App: Simple Web App developed using React with TypeScript
-                <a
+                <motion.a
                   href="https://github.com/divy-03/ToDo---Web-App"
                   target="_blank"
+                  whileHover={{ scale: 1.2 }}
+                  whileTap={{ scale: 0.9 }}
+                  transition={{ type: "spring", stiffness: 400, damping: 17 }}
                 >
                   <HiArrowUpRight />
-                </a>
+                </motion.a>
               </h3>
               <p>
                 Developed a user-friendly to-do list application for task
@@ -441,12 +480,15 @@ const App = () => {
             <div className="project">
               <h3>
                 Tic Tac Toe: Interactive game using React.js
-                <a
+                <motion.a
                   href="https://github.com/divy-03/Tic-Tac-Toe"
                   target="_blank"
+                  whileHover={{ scale: 1.2 }}
+                  whileTap={{ scale: 0.9 }}
+                  transition={{ type: "spring", stiffness: 400, damping: 17 }}
                 >
                   <HiArrowUpRight />
-                </a>
+                </motion.a>
               </h3>
               <p>
                 Designed an interactive Tic Tac Toe game with a clean interface

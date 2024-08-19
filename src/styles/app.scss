@@ -71,6 +71,7 @@ body {
   border: 1px solid rgba(210, 210, 210, 0.738);
   // animation: fade-up-once 1s;
   border-radius: 10px;
+  overflow: hidden;
 
   > ul {
     @include flex();

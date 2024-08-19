@@ -8,8 +8,8 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 import { useRef } from "react";
 import Footer from "./components/Footer";
+import { motion } from "framer-motion";
 gsap.registerPlugin(useGSAP, ScrollTrigger);
-
 
 const App = () => {
   const tl = useRef<gsap.core.Timeline | null>(null);
@@ -22,7 +22,8 @@ const App = () => {
       .from(".heroSection > h1", { opacity: 0, ease: "expo.out" })
       .from(".headCont", { y: -100, opacity: 0 })
       .from(".scrollD", { x: -200, duration: 0.6 }, "-=.6")
-      .from(".copy", { x: 100, duration: 0.6 }, "-=.3");
+      .from(".copy", { x: 100, duration: 0.6 }, "-=.3")
+      .from(".marquee", {y: 500, opacity: 0, duration: 1});
 
     gsap.from(".navCont", {
       y: 120,
@@ -237,7 +238,22 @@ const App = () => {
   return (
     <>
       <section className="heroSection">
-        <h1>Divy Pathak</h1>
+        <div className="marquee">
+          <motion.h1
+            initial={{ x: "0" }}
+            animate={{ x: "-100%" }}
+            transition={{ duration: 10, ease: "linear", repeat: Infinity, delay: 2 }}
+          >
+            Divy Pathak
+          </motion.h1>
+          <motion.h1
+            initial={{ x: "0" }}
+            animate={{ x: "-100%" }}
+            transition={{ duration: 10, ease: "linear", repeat: Infinity, delay: 2 }}
+          >
+            Divy Pathak
+          </motion.h1>
+        </div>
         <img
           className="heroImg"
           src={

@@ -116,6 +116,18 @@ body {
     bottom: 0;
     // animation: fade-up-once 2s;
   }
+
+  > .marquee {
+    display: flex;
+    width: 100%;
+
+    > h1 {
+      flex-wrap: wrap;
+      flex-shrink: 0;
+      font-size: 20vw;
+      padding-left: 5vw;
+    }
+  }
 }
 
 .about {
@@ -240,33 +252,6 @@ body {
   }
 }
 
-.marquee1 {
-  @include flex();
-  width: 100%;
-  overflow: hidden;
-  white-space: nowrap;
-  box-sizing: border-box;
-  position: absolute;
-}
-
-.marquee-content1 {
-  display: inline-block;
-  // padding-left: 100%;
-  // animation: marquee1 8s linear infinite;
-  font-size: 18rem;
-  font-weight: 900;
-  font-family: sansa;
-}
-
-@keyframes marquee1 {
-  0% {
-    transform: translateX(0%);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
-}
-
 .copy {
   @include flex();
   position: fixed;
@@ -296,38 +281,7 @@ body {
     font-weight: bold;
     margin: auto;
   }
-
-  .marquee2 {
-    @include flex();
-    overflow: hidden;
-    height: 2rem;
-    width: 2rem;
-    border-radius: 5px;
-    border: 1px solid;
-
-    .marquee-content2 {
-      display: inline-block;
-      // animation: marquee2 2s linear infinite;
-      font-size: 2rem;
-      font-weight: 900;
-      font-family: sansa;
-
-      > svg {
-        font-size: 1.2rem;
-      }
-    }
-  }
 }
-
-@keyframes marquee2 {
-  0% {
-    transform: translateY(-100%);
-  }
-  100% {
-    transform: translateY(100%);
-  }
-}
-
 .fade-up {
   opacity: 0;
   filter: blur(2px);
@@ -465,8 +419,7 @@ body {
     padding: 4rem;
 
     > div > div {
-    @include flex(column);
-
+      @include flex(column);
     }
   }
 

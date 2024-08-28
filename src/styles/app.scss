@@ -17,6 +17,7 @@ body {
 @import "mixin";
 @import "variables";
 @import "footer";
+@import "preLoader";
 
 .headCont {
   @include flex(row, space-between, center);

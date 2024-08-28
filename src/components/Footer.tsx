@@ -1,18 +1,10 @@
 import { motion } from "framer-motion";
 import { HiArrowUpRight } from "react-icons/hi2";
-import LocomotiveScroll from "locomotive-scroll";
-import { useRef } from "react";
-
 
 const Footer = () => {
-  const footer = useRef<HTMLDivElement>(null);
-
-  const locomotiveScroll = new LocomotiveScroll();
-  locomotiveScroll.destroy();
-  
 
   return (
-    <div data-scroll data-scroll-speed="0.6" className="footCont" ref={footer}>
+    <div data-scroll data-scroll-speed="0.6" className="footCont">
       <div>
         <div className="footHead">
           <h2>Divy Pathak</h2>
